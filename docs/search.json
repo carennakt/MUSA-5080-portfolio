@@ -1,5 +1,96 @@
 [
   {
+    "objectID": "weekly-notes/week-02.html",
+    "href": "weekly-notes/week-02.html",
+    "title": "Week 1: Getting Set Up",
+    "section": "",
+    "text": "What is a Website?\n\na folder of html files + a computer that is always on\nwe are going to be using Quarto + GitHub\n\nWhat is Quarto? a.makes .qmd files that you write → magic quarto machine → html files b.magic is made by clicking render c.what happens in the machine — 1. reads the file from top to bottom 2. finds the code chunks 3. sends them to R, gets results 4. glues the text + the results into html d. if there is an error the magic does not happen Anatomy of a .qmd\nFiles + Folders a. Who is this file for? b.For me files vs For the machine\nFor me index.qmd about.qmd weekly_notes/.qmd assignments/.qmd For machine _quarto.yml (settings for the whole website) _freeze/ (for quarto after it gets rendered Do not touch) .Rproj → Rstudio .gitignore → Github .renviron → R (secrets) docs/ → the internet i.e. where your website lives\n“Index” a. website rule: ask for a folder, you get that folder index.html b. carennakt.github.io/ → docs/index.html /weekly-notes → docs/weekly.notes/index.html\nGIT/GitHub.com/GitHub desktop a. GIT is a version tracker, invisible, runs on your computer i. commit → “save a labeled snapshot” (lives on your computer) ii. push → “send my snapshot to GitHub.com” b.GitHub.com is a website that stores a copy of your folder c.GitHub desktop are buttons that tell GIT what to do\n.Rscript a. code only b.sandbox c.good for working out the problems, experimenting, sketch book d. In console you can run stuff real quick but it doesnt save repository is like a larger folder that you wanna share w the world on github\nWorkflow a. everyweek you will download a .qmd file and put it into assignments along w some data b.make sure to have highlighted your index.qmd c.when you are rendering you want to click on index when you press render d.commit is different from saving – commit saves since the last time you committed then you push it to github.com e.C:-portf olio"
+  },
+  {
+    "objectID": "weekly-notes/week-02.html#what-we-did",
+    "href": "weekly-notes/week-02.html#what-we-did",
+    "title": "Week 1: Getting Set Up",
+    "section": "",
+    "text": "What is a Website?\n\na folder of html files + a computer that is always on\nwe are going to be using Quarto + GitHub\n\nWhat is Quarto? a.makes .qmd files that you write → magic quarto machine → html files b.magic is made by clicking render c.what happens in the machine — 1. reads the file from top to bottom 2. finds the code chunks 3. sends them to R, gets results 4. glues the text + the results into html d. if there is an error the magic does not happen Anatomy of a .qmd\nFiles + Folders a. Who is this file for? b.For me files vs For the machine\nFor me index.qmd about.qmd weekly_notes/.qmd assignments/.qmd For machine _quarto.yml (settings for the whole website) _freeze/ (for quarto after it gets rendered Do not touch) .Rproj → Rstudio .gitignore → Github .renviron → R (secrets) docs/ → the internet i.e. where your website lives\n“Index” a. website rule: ask for a folder, you get that folder index.html b. carennakt.github.io/ → docs/index.html /weekly-notes → docs/weekly.notes/index.html\nGIT/GitHub.com/GitHub desktop a. GIT is a version tracker, invisible, runs on your computer i. commit → “save a labeled snapshot” (lives on your computer) ii. push → “send my snapshot to GitHub.com” b.GitHub.com is a website that stores a copy of your folder c.GitHub desktop are buttons that tell GIT what to do\n.Rscript a. code only b.sandbox c.good for working out the problems, experimenting, sketch book d. In console you can run stuff real quick but it doesnt save repository is like a larger folder that you wanna share w the world on github\nWorkflow a. everyweek you will download a .qmd file and put it into assignments along w some data b.make sure to have highlighted your index.qmd c.when you are rendering you want to click on index when you press render d.commit is different from saving – commit saves since the last time you committed then you push it to github.com e.C:-portf olio"
+  },
+  {
+    "objectID": "weekly-notes/week-02.html#key-concepts",
+    "href": "weekly-notes/week-02.html#key-concepts",
+    "title": "Week 1: Getting Set Up",
+    "section": "Key Concepts",
+    "text": "Key Concepts\nThree places a file can live:\n\nMy computer — where I edit\nGitHub.com — where it’s stored\nMy live site — what the world sees\n\nThe loop: Edit → Save → Render → Commit → Push → wait → refresh"
+  },
+  {
+    "objectID": "weekly-notes/week-02.html#proving-r-works",
+    "href": "weekly-notes/week-02.html#proving-r-works",
+    "title": "Week 1: Getting Set Up",
+    "section": "Proving R Works",
+    "text": "Proving R Works\nThe chunk below runs when this page renders. If you can see a result underneath it on your published site, R and Quarto are talking to each other correctly.\n\nsessionInfo()$R.version$version.string\n\n[1] \"R version 4.6.1 (2026-06-24 ucrt)\""
+  },
+  {
+    "objectID": "weekly-notes/week-02.html#reflection",
+    "href": "weekly-notes/week-02.html#reflection",
+    "title": "Week 1: Getting Set Up",
+    "section": "Reflection",
+    "text": "Reflection\n\nWhat I want out of this course: I do not have a good understanding of R, but I already feel like I am learning so much! I would love to learn how to make visualizations that have to do with my research interests. I would also like to learn the nessesary work flow from idea to execution of a project as it relates to governance and urban issues.\nOne thing I’m nervous about: Since I do not have a lot of experience in programming I am nervous for when it gets a little more complicated and the chaos. But also looking forward to the problem solving as I learn the best by making mistakes."
+  },
+  {
+    "objectID": "weekly-notes/week-02.html#questions-i-still-have",
+    "href": "weekly-notes/week-02.html#questions-i-still-have",
+    "title": "Week 1: Getting Set Up",
+    "section": "Questions I Still Have",
+    "text": "Questions I Still Have\n-how do I change the fonts/theme of my portfolio? -looking up now how to add images but tbd if I will figure it out before class on Friday."
+  },
+  {
+    "objectID": "weekly-notes/index.html",
+    "href": "weekly-notes/index.html",
+    "title": "Weekly Notes",
+    "section": "",
+    "text": "Notes from each week of MUSA 5080. New entries appear here automatically — add a .qmd file to this folder and render.\n\n\n\n\n\n\n\n\n\n\n\nWeek 1: Getting Set Up\n\n\nFirst impressions, and getting the workflow running.\n\n\n\n\n\nAug 28, 2026\n\n\n\n\n\n\n\nWeek 1: Getting Set Up\n\n\nFirst impressions, and getting the workflow running.\n\n\n\n\n\nAug 28, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "data/readme.html",
+    "href": "data/readme.html",
+    "title": "",
+    "section": "",
+    "text": "Code\n\n\n\n\nData files for MUSA 5080\nDownload assignment data from Canvas and save it here. Do not rename the files! Have a nice day :)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Before joining the MUSA program, I graduated from The George Washington University in Washington D.C. I received a Bachelor of Science in International Affairs and Geography with a minor in Geographic Information Systems. During my undergraduate degree I studied at Queen’s University Belfast and Université Paris Dauphine. In Belfast, I developed original research on immigrant integration in post-conflict cities funded by the GW Undergraduate Research Award. In Paris, I expanded my knowledge of immigrant communities in the EU and became proficient in French. Before my bachelors, I received an International Baccalaureate Diploma at the United World College in Maastricht, The Netherlands.\nI am passionate about urban spatial analysis because I believe access to data and productively educating the public with data visualizations is a core pillar of our world. I love cities and learning about the different layers that form a city’s unique identity. I hope to gain skills in programming and research methods that can aid in my future workplace or in pursuit of a PhD."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "",
+    "text": "Before joining the MUSA program, I graduated from The George Washington University in Washington D.C. I received a Bachelor of Science in International Affairs and Geography with a minor in Geographic Information Systems. During my undergraduate degree I studied at Queen’s University Belfast and Université Paris Dauphine. In Belfast, I developed original research on immigrant integration in post-conflict cities funded by the GW Undergraduate Research Award. In Paris, I expanded my knowledge of immigrant communities in the EU and became proficient in French. Before my bachelors, I received an International Baccalaureate Diploma at the United World College in Maastricht, The Netherlands.\nI am passionate about urban spatial analysis because I believe access to data and productively educating the public with data visualizations is a core pillar of our world. I love cities and learning about the different layers that form a city’s unique identity. I hope to gain skills in programming and research methods that can aid in my future workplace or in pursuit of a PhD."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About Me",
+    "section": "Skills",
+    "text": "Skills\n\n\nLanguages & Tools: R, Quarto, Git\nSpatial:: ArcGIS, GeoDa\nData: US Census / ACS via tidycensus"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Me",
+    "section": "Contact",
+    "text": "Contact\n\n\nEmail: ckt@upenn.edu\nGitHub: @carennakt"
+  },
+  {
+    "objectID": "assignments/index.html",
+    "href": "assignments/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Completed assignments for MUSA 5080. New assignments appear here automatically once you add the .qmd file to this folder and render.\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
@@ -68,61 +159,5 @@
     "title": "Week 1: Getting Set Up",
     "section": "Questions I Still Have",
     "text": "Questions I Still Have\n-how do I change the fonts/theme of my portfolio? -looking up now how to add images but tbd if I will figure it out before class on Friday."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "Before joining the MUSA program, I graduated from The George Washington University in Washington D.C. I received a Bachelor of Science in International Affairs and Geography with a minor in Geographic Information Systems. During my undergraduate degree I studied at Queen’s University Belfast and Université Paris Dauphine. In Belfast, I developed original research on immigrant integration in post-conflict cities funded by the GW Undergraduate Research Award. In Paris, I expanded my knowledge of immigrant communities in the EU and became proficient in French. Before my bachelors, I received an International Baccalaureate Diploma at the United World College in Maastricht, The Netherlands.\nI am passionate about urban spatial analysis because I believe access to data and productively educating the public with data visualizations is a core pillar of our world. I love cities and learning about the different layers that form a city’s unique identity. I hope to gain skills in programming and research methods that can aid in my future workplace or in pursuit of a PhD."
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About Me",
-    "section": "",
-    "text": "Before joining the MUSA program, I graduated from The George Washington University in Washington D.C. I received a Bachelor of Science in International Affairs and Geography with a minor in Geographic Information Systems. During my undergraduate degree I studied at Queen’s University Belfast and Université Paris Dauphine. In Belfast, I developed original research on immigrant integration in post-conflict cities funded by the GW Undergraduate Research Award. In Paris, I expanded my knowledge of immigrant communities in the EU and became proficient in French. Before my bachelors, I received an International Baccalaureate Diploma at the United World College in Maastricht, The Netherlands.\nI am passionate about urban spatial analysis because I believe access to data and productively educating the public with data visualizations is a core pillar of our world. I love cities and learning about the different layers that form a city’s unique identity. I hope to gain skills in programming and research methods that can aid in my future workplace or in pursuit of a PhD."
-  },
-  {
-    "objectID": "about.html#skills",
-    "href": "about.html#skills",
-    "title": "About Me",
-    "section": "Skills",
-    "text": "Skills\n\n\nLanguages & Tools: R, Quarto, Git\nSpatial:: ArcGIS, GeoDa\nData: US Census / ACS via tidycensus"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About Me",
-    "section": "Contact",
-    "text": "Contact\n\n\nEmail: ckt@upenn.edu\nGitHub: @carennakt"
-  },
-  {
-    "objectID": "assignments/index.html",
-    "href": "assignments/index.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Completed assignments for MUSA 5080. New assignments appear here automatically once you add the .qmd file to this folder and render.\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "weekly-notes/index.html",
-    "href": "weekly-notes/index.html",
-    "title": "Weekly Notes",
-    "section": "",
-    "text": "Notes from each week of MUSA 5080. New entries appear here automatically — add a .qmd file to this folder and render.\n\n\n\n\n\n\n\n\n\n\n\nWeek 1: Getting Set Up\n\n\nFirst impressions, and getting the workflow running.\n\n\n\n\n\nAug 28, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "data/readme.html",
-    "href": "data/readme.html",
-    "title": "",
-    "section": "",
-    "text": "Code\n\n\n\n\nData files for MUSA 5080\nDownload assignment data from Canvas and save it here. Do not rename the files! Have a nice day :)"
-  },
-  {
-    "objectID": "assignments/Week1.html",
-    "href": "assignments/Week1.html",
-    "title": "Week 1",
-    "section": "",
-    "text": "What is a Website? a. a folder of html files + a computer that is always on b. we are going to be using Quarto + GitHub What is Quarto? a.makes .qmd files that you write → magic quarto machine → html files b.magic is made by clicking render c.what happens in the machine — 1. reads the file from top to bottom 2. finds the code chunks 3. sends them to R, gets results 4. glues the text + the results into html d. if there is an error the magic does not happen Anatomy of a .qmd\nFiles + Folders a. Who is this file for? b.For me files vs For the machine For me index.qmd about.qmd weekly_notes/.qmd assignments/.qmd For machine _quarto.yml (settings for the whole website) _freeze/ (for quarto after it gets rendered Do not touch) .Rproj → Rstudio .gitignore → Github .renviron → R (secrets) docs/ → the internet i.e. where your website lives\n“Index” a. website rule: ask for a folder, you get that folder index.html b. carennakt.github.io/ → docs/index.html /weekly-notes → docs/weekly.notes/index.html GIT/GitHub.com/GitHub desktop a. GIT is a version tracker, invisible, runs on your computer i. commit → “save a labeled snapshot” (lives on your computer) ii. push → “send my snapshot to GitHub.com” b.GitHub.com is a website that stores a copy of your folder c.GitHub desktop are buttons that tell GIT what to do .Rscript a. code only b.sandbox c.good for working out the problems, experimenting, sketch book d. In console you can run stuff real quick but it doesnt save repository is like a larger folder that you wanna share w the world on github Workflow a. everyweek you will download a .qmd file and put it into assignments along w some data b.make sure to have highlighted your index.qmd c.when you are rendering you want to click on index when you press render d.commit is different from saving – commit saves since the last time you committed then you push it to github.com e.C:-portfolio"
   }
 ]
