@@ -1,6 +1,6 @@
 ---
-title: "Week 1: Getting Set Up"
-description: "First impressions, and getting the workflow running."
+title: "Week 2"
+description: "learning to fly solo on R"
 date: 2026-08-28
 ---
 
