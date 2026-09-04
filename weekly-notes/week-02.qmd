@@ -10,7 +10,7 @@ We had a quiz. Panic. But it turned out fine.
 
 ##Key Concepts
 
-The loop: **Edit --> Save --> Render --> Commit --> Push --> wait *(take a breath* Refresh --> Enjoy**
+The loop: **Edit --> Save --> Render --> Commit --> Push --> wait *(take a breath*) Refresh --> Enjoy**
 
 What is a Website?
 
