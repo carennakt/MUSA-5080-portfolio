@@ -1,12 +1,16 @@
 ---
-title: "Week 2"
-description: "learning to fly solo on R"
-date: 2026-08-28
+title: "Week 2: dplyr and Census"
+description: "table functions and acs data"
+date: 2026-09-04
 ---
 
 ## What We Did
 
-<!-- CHANGE THIS: replace with your own notes -->
+We had a quiz. Panic. But it turned out fine. 
+
+##Key Concepts
+
+The loop: **Edit --> Save --> Render --> Commit --> Push --> wait *(take a breath* Refresh --> Enjoy**
 
 What is a Website?
 
