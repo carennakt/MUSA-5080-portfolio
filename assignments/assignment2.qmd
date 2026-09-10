@@ -18,20 +18,14 @@ execute:
 ```{r}
 library(tidyverse)
 library(tidycensus)
+library(knitr)
+
 ```
 
 
 ## The question
 
-Every number the American Community Survey publishes is an estimate drawn from a
-sample, not a count. That means every number comes with a margin of error — a
-statement about how wrong it might be.
-
-Most people ignore it. In this assignment, you won't.
-
-
-
-**In this analysis, I look at median gross rent across counties in California, and
+In this analysis, I look at median gross rent across counties in California, and
 ask which communities we measure most and least reliably.** I am looking at California because I grew up in Sacramento. There are a wide range of counties and rent prices throughout the state so I thought it would be an apt state and variable to look at when measuring reliability. 
 
 ---
@@ -73,9 +67,6 @@ head(ca_rent)
 
 ## How big is the margin of error?
 
-A margin of error of 3,000 means something very different for an estimate of 20,000
-than for an estimate of 200,000. To compare across places, we need it as a
-percentage.
 
 ```{r}
 #margin of error studies
@@ -84,8 +75,6 @@ ca_rent = ca_rent %>%
   mutate(moe_pct = as.numeric(moe) / as.numeric(estimate) * 100)
 ```
 
-
-Now sort to see which counties are measured least reliably.
 
 ```{r}
 #lets take a look 
@@ -97,7 +86,7 @@ ca_rent %>%
 ```
 
 
-**Sierra County has the largest margin of error relative to its estimate at 705 MOE to an estimate of 1181. The MOE percent is around 59.7%.**
+Sierra County has the largest margin of error relative to its estimate at 705 MOE to an estimate of 1181. The MOE percent is around 59.7%.
 
 ---
 
@@ -114,14 +103,12 @@ count(ca_rent, reliability)
 ```
 
 
-**39 counties fall into the high confidence with a MOE percentage of under 5%. 13 counties fall into the moderate with a MOE percentage of under 10%. 6 counties fall into the low confidence with a MOE percentage above 10%**
+39 counties fall into the high confidence with a MOE percentage of under 5%. 13 counties fall into the moderate with a MOE percentage of under 15%. 6 counties fall into the low confidence with a MOE percentage above 15%
 
 ---
 
 ## Is the margin of error bigger in small places?
 
-To answer this we need population and our variable side by side, in the same row.
-That means a **wide** pull.
 
 ```{r}
 ca_wide = get_acs (
@@ -148,18 +135,24 @@ ca_wide = ca_wide %>%
 ))
 ```
 
-Now compare the average population of counties in each reliability category.
-
 ```{r}
-ca_wide %>%
+summary_reliability = ca_wide %>%
   group_by(reliability) %>%
   summarize(
   n_counties = n(),
   avg_population = mean(popE)
 )
+
+summary_reliability %>%
+  kable(
+    col.names = c("Reliability", "Number of Counties", "Average Population"),
+    digits = 1,
+    format.args = list(big.mark = ",")
+  )
+
 ```
 
-**The average population in 39 that has a high confidence reliability is 989,118. The table shows reliability decreasing in population with 16 counties having a moderate reliability and an average of 45,927 people and 6 counties having low confidence with an average population of 11,691.  **
+The average population in 39 counties that has a high confidence reliability is 989,118. The table shows reliability decreasing in population with 16 counties having a moderate reliability and an average of 45,927 people and 6 counties having low confidence with an average population of 11,691.  
 
 ---
 
@@ -168,9 +161,9 @@ ca_wide %>%
 
 
 
-**[Sierra, Trinity, and Plumas County are the top three counties with the least reliable data in the ACS. All of these counties have lower populations than the rest of California and host national forests. Sierra county is an outlier from Trinity and Plumas County. While the average population between all of the low reliability is around 11,000, both Trinity and Plumas have populations of 15,000 and 19,000, whereas Sierra County has a population of around 2,700 (Figure 1). Additionally, Trinity and Plumas have MOE percentages of 23.9 and 14.3, respectively. This is vastly different from Sierra County who has a MOE percentage of 59.7 (Figure 1). Due to the ACS collecting data via sampling, it is likely that the low population causes less reliability due to the smaller sample size. Low population areas like Sierra County may get less responses to the survey as opposed to high population areas where there may be more people to survey and thus more chances at responses. 
+Sierra, Trinity, and Plumas County are the top three counties with the least reliable data in the ACS. All of these counties have lower populations than the rest of California and host national forests. Sierra county is an outlier from Trinity and Plumas County. While the average population between all of the low reliability is around 11,000, both Trinity and Plumas have populations of 15,000 and 19,000, whereas Sierra County has a population of around 2,700 (Figure 1). Additionally, Trinity and Plumas have MOE percentages of 23.9 and 14.3, respectively. This is vastly different from Sierra County who has a MOE percentage of 59.7 (Figure 1). Due to the ACS collecting data via sampling, it is likely that the low population causes less reliability due to the smaller sample size. Low population areas like Sierra County may get less responses to the survey as opposed to high population areas where there may be more people to survey and thus more chances at responses. 
 
-A possible issue that may occur could be when the government uses this gross median rent to determine how much funding is allocated for emergency relief in a disaster. All three of these counties had wildfires in August 2026. Wildfires may cause loss of property, which can affect homeowners and renters. California's emergency relief organization (CALOES) may use the ACS gross median rent data to calculate the amount to give those who are in search of temporary housing or renters who may be receiving rent debt grants. If the ACS data for the gross median rent in these counties are  unreliable this could lead to an underestimate of relief grants leaving those affected by wildfires to take on more financial burdens after a national disaster.]**
+A possible issue that may occur could be when the government uses this gross median rent to determine how much funding is allocated for emergency relief in a disaster. All three of these counties had wildfires in August 2026. Wildfires may cause loss of property, which can affect homeowners and renters. California's emergency relief organization (CALOES) may use the ACS gross median rent data to calculate the amount to give those who are in search of temporary housing or renters who may be receiving rent debt grants. If the ACS data for the gross median rent in these counties are  unreliable this could lead to an underestimate of relief grants leaving those affected by wildfires to take on more financial burdens after a national disaster.
 
 ### Figure 1
 ```{r}
@@ -179,26 +172,13 @@ least_reliable = ca_wide %>%
   slice_head(n = 3) %>%
   select(NAME, popE, myvarE, moe_pct, reliability)
   
+least_reliable %>%
+  kable(
+    col.names = c("County", "Population", "Rent Estimate ($)", "MOE (%)", "Reliability"),
+    digits = 1,
+    format.args = list(big.mark = ",")
+  )
 
 
-least_reliable
 ```
 
-
-
----
-
-## Before you submit
-
-::: {.callout-note}
-## Delete this box — checklist
-
-- [ ] Your name is in the YAML header
-- [ ] Every instruction callout is deleted
-- [ ] Every `[bracketed prompt]` is replaced with your own writing
-- [ ] No `___` blanks remain anywhere
-- [ ] The file is at `assignments/assignment2.qmd`
-- [ ] **Session → Restart R**, then render the whole project. It works.
-- [ ] Committed and pushed
-- [ ] You opened your live site and looked at the published page
-:::
