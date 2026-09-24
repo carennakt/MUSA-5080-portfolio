@@ -13,5 +13,21 @@
       "/assignments/assignment2.html",
       "/assignments/assignment3.html"
     ]
+  },
+  {
+    "listing": "/MUSA-5080-portfolio/weekly-notes/index.html",
+    "items": [
+      "/MUSA-5080-portfolio/weekly-notes/week-04.html",
+      "/MUSA-5080-portfolio/weekly-notes/week-02.html",
+      "/MUSA-5080-portfolio/weekly-notes/week-03.html",
+      "/MUSA-5080-portfolio/weekly-notes/week-01.html"
+    ]
+  },
+  {
+    "listing": "/MUSA-5080-portfolio/assignments/index.html",
+    "items": [
+      "/MUSA-5080-portfolio/assignments/assignment2 .html",
+      "/MUSA-5080-portfolio/assignments/assignment3.html"
+    ]
   }
 ]
